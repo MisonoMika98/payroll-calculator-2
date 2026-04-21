@@ -28,8 +28,10 @@ public class Main {
         try {
             // variables to read the file, NOTE: fileName string in FileReader()
             // instead of hardcoding an actual file name to let user input
+
             FileReader fileReader = new FileReader(fileName);
             bufferedReader = new BufferedReader(fileReader);
+
 
             // variables to write the file, NOTE: fileNameChosen string in FileOutputStream()
             // instead of hardcoding the file name you chose beforehand, lets you input one
@@ -47,6 +49,7 @@ public class Main {
             printer.printf("%-10s %-25s %-15s%n", "ID", "Name", "Gross Pay");
             printer.printf("%-10s %-25s %-15s%n", "----------", "-------------------------", "---------------");
 
+            // while loop that reads the entire file
             while(lines != null)
             {
                 // create array to read each column of the .csv file
@@ -71,13 +74,14 @@ public class Main {
             }
 
         }
+        // catches any errors when inputing filename, in this case it HAS to be employees.csv
         catch (Exception ex)
         {
             System.out.println("What are you doing!");
             System.out.println(ex.getMessage());
         }
 
-
+        // runs no matter what
         finally
         {
             // 3) closes the file
@@ -91,6 +95,7 @@ public class Main {
                 System.out.println(ex.getMessage());
             }
         }
+        // might not be needed? everything else closes so might as well
         userInput.close();
     }
 
