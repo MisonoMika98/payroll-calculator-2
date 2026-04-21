@@ -43,7 +43,7 @@ public class Main {
             // skip the first line/original header - and reads again
             lines = bufferedReader.readLine();
 
-            // new header for the file
+            // new header for the file, since the original header is skipped to help the array work
             printer.printf("%-10s %-25s %-15s%n", "ID", "Name", "Gross Pay");
             printer.printf("%-10s %-25s %-15s%n", "----------", "-------------------------", "---------------");
 
