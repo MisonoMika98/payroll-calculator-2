@@ -39,7 +39,7 @@ public class Main {
             FileOutputStream fileOutputStream = new FileOutputStream(fileNameChosen);
             printer = new PrintStream(fileOutputStream);
 
-
+            // redundant? probably
             String lines = bufferedReader.readLine();
 
             // skip the first line/original header - and reads again
@@ -74,7 +74,7 @@ public class Main {
             }
 
         }
-        // catches any errors when inputing filename, in this case it HAS to be employees.csv
+        // catches any errors when inputting filename, in this case it HAS to be employees.csv
         catch (Exception ex)
         {
             System.out.println("What are you doing!");
